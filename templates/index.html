@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#" title="copy-link"><span><ion-icon name="link-outline"></ion-icon></span></a>
+            <a href="#" title="linkedin"><span><ion-icon name="logo-linkedin"></ion-icon></span></a>
+            <a href="#" title="github"><span><ion-icon name="logo-github"></ion-icon></span></a>
+        </nav>
+        <h1>Movie Recommendation System</h1>
+    </header>
+
+
+    <section id="page-1">
+        <!-- Input Form -->
+        <form method="POST" action="/" id="input_box">
+            <label for="movie"><strong>Enter a movie title :</strong></label>
+            <input type="text" id="movie" name="movie" required>
+            <br>
+            <button type="submit" id="submit" class="btn">Submit</button>
+        </form>
+
+
+        <!-- Verification Section -->
+        <div id="verification_box">
+            {% if message %}
+            <h2>{{ message }}</h2>
+            {% endif %}
+
+            {% if show_buttons %}
+            <form method="POST" action="/" id="verify">
+                <input type="hidden" name="closest_match" value="{{ closest_match }}">
+                <button type="submit" name="response" value="yes" id="yes-btn" class="btn">Yes</button>
+                <button type="submit" name="response" value="no" class="btn">No</button>
+            </form>
+            {% endif %}
+        </div>
+
+        <div class="tips">
+            <h4>Tips</h4>
+            <ul>
+                <li>Try to search movies before 2021</li>
+                <li>We have strong library for those movies</li>
+                <li>No need to worry about spelling mistakes</li>
+                <li>we provide a list o f 30 similar movies</li>
+                <li>you can directly copy them</li>
+                
+            </ul>
+        </div>
+
+    </section>
+
+
+    <section id="page-2">
+
+        {% if recommendations %}
+        <div class="revealer"></div>
+        {% endif %}
+        <!-- Recommendations Section -->
+        {% if recommendations %}
+
+        <div id="recommendations">
+            <h3>Top Movie Recommendations</h3>
+            <hr>
+            <ol>
+                {% for recommendation in recommendations %}
+                <li>{{ recommendation }}</li>
+                {% endfor %}
+            </ol>
+            <!-- <button id="copy-btn">Copy</button> -->
+        </div>
+        {% endif %}
+
+        
+
+    </section>
+
+    <script src="../static/js/script.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
