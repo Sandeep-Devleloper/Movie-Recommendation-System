@@ -11,7 +11,7 @@ class Movie_Recomendation_System:
 
     def __init__(self):
         # Load dataset
-        self.data = pd.read_csv("G:/Virtualenv/virtualenv/Movie_Recomendation_System/static/datasets")
+        self.data = pd.read_csv("Movie_Recomendation_System/static/datasets")
         
         # Required features for movie recommendation
         self.Required_features = ['genres', 'keywords', 'title', 'overview', 'cast', 'director', 
