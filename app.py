@@ -5,13 +5,13 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 class Movie_Recomendation_System:
 
     def __init__(self):
         # Load dataset
-        self.data = pd.read_csv("G:/Virtualenv/virtualenv/Movie_Recomendation_System/static/datasets")
+        self.data = pd.read_csv("movies_info.csv")
         
         # Required features for movie recommendation
         self.Required_features = ['genres', 'keywords', 'title', 'overview', 'cast', 'director', 
@@ -75,8 +75,7 @@ class Movie_Recomendation_System:
         for x, i in enumerate(sorted_similarities):
             index = i[0]
             title_movie_index = self.data.iloc[index]["title"]
-            if x < 30:  # Top 30 recommendations
-                # recommendations.append(f"{x + 1}. {title_movie_index}")
+            if index != movie_index and x < 30:  # Exclude the original movie and limit to top 30
                 recommendations.append(f"{title_movie_index}")
         return recommendations
 
