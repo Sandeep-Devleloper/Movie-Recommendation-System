@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request
+from flask import Blueprint, render_template, request
 import time
 import difflib
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-app = Flask(__name__, static_folder="static")
+# Define the Blueprint
+main = Blueprint('main', __name__)
 
 class Movie_Recomendation_System:
 
@@ -79,11 +80,10 @@ class Movie_Recomendation_System:
                 recommendations.append(f"{title_movie_index}")
         return recommendations
 
-
 # Initialize movie recommendation system
 mrs = Movie_Recomendation_System()
 
-@app.route('/', methods=['GET', 'POST'])
+@main.route('/', methods=['GET', 'POST'])
 def index():
     movie = None
     message = None
@@ -108,7 +108,3 @@ def index():
     return render_template('index.html', movie=movie, message=message, 
                            recommendations=recommendations, closest_match=closest_match, 
                            show_buttons=show_buttons)
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000,debug=True)
