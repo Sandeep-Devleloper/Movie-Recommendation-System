@@ -4,7 +4,7 @@ A Machine Learning-based movie recommendation system that suggests movies based 
 
 ---
 
-### Try It Out on Colab
+### [Try It Out on Colab](https://colab.research.google.com/drive/1pG2efa89l1aoJYm6VPVV9-4FVWwuAmFk?usp=sharing)
 
 If you'd like to experiment with the recommendation system without setting it up locally, you can use this [Google Colab Notebook](https://colab.research.google.com/drive/1pG2efa89l1aoJYm6VPVV9-4FVWwuAmFk?usp=sharing) to try it out directly in your browser.
 
