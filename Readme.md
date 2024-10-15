@@ -5,16 +5,16 @@ A Machine Learning-based movie recommendation system that suggests movies based 
 ---
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Folder Structure](#folder-structure)
-4. [Tech Stack](#tech-stack)
-5. [How It Works](#how-it-works)
-6. [Setup Instructions](#setup-instructions)
-7. [Memory Limitations](#memory-limitations)
-8. [Screenshots](#screenshots)
-9. [Demo Video](#demo-video)
-10. [Future Improvements](#future-improvements)
+1. Project Overview
+2. Features
+3. Folder Structure
+4. Tech Stack
+5. How It Works
+6. Setup Instructions
+7. Memory Limitations
+8. Screenshots
+9. Demo Video
+10. Future Improvements
 
 ---
 
