@@ -1,4 +1,4 @@
-# Movie Recommendation System 🎬
+# Ml powered Movie Recommendation System 🎬
 
 A Machine Learning-based movie recommendation system that suggests movies based on user preferences such as genres, keywords, cast, director, and more. This project is built using **Flask** for the web application framework and various **ML algorithms** to recommend movies. 
 
