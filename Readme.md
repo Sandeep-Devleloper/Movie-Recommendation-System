@@ -146,10 +146,10 @@ This project requires more memory than most free hosting platforms (like Heroku 
 Below are some screenshots of the app running locally:
 
 1. **Home Page**:
-   ![Home Page](./screenshots/home_page.png)
+   ![Home Page](./read-me-pics/1.png)
 
 2. **Recommendation Results**:
-   ![Recommendations](./screenshots/recommendations.png)
+   ![Recommendations](./read-me-pics/2.pn)
 
 ---
 
