@@ -149,7 +149,7 @@ Below are some screenshots of the app running locally:
    ![Home Page](./read-me-pics/1.png)
 
 2. **Recommendation Results**:
-   ![Recommendations](./read-me-pics/2.pn)
+   ![Recommendations](./read-me-pics/2.jpg)
 
 ---
 
